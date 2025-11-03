@@ -21,8 +21,6 @@ scikit-learn==1.5.2
 pydantic==2.9.2
 
 # Apps
-fastapi==0.115.2
-uvicorn[standard]==0.31.1
 streamlit==1.39.0
 
 # Testing
