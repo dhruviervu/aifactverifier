@@ -16,7 +16,7 @@ from fact_verifier.app.api import run_verification
 
 
 st.set_page_config(page_title="Fact Verifier", layout="wide")
-st.title("Production-Grade Fact Verifier")
+st.title("AI Output Fact Verifier")
 
 user_text = st.text_area("Enter text to verify", height=200)
 
