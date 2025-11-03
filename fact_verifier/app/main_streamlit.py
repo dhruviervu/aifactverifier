@@ -12,7 +12,7 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from fact_verifier.app.api import run_verification
+from fact_verifier.modules.scorer import verify_text
 
 
 st.set_page_config(page_title="Fact Verifier", layout="wide")
@@ -22,7 +22,7 @@ user_text = st.text_area("Enter text to verify", height=200)
 
 if st.button("Verify"):
     with st.spinner("Running verification pipeline..."):
-        results = run_verification(user_text)
+        results = verify_text(user_input)
     if not results:
         st.info("No claims detected or no evidence found.")
     else:
